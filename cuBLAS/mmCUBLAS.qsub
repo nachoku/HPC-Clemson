@@ -1,0 +1,9 @@
+#!/bin/bash
+#PBS -N mmCUBLAS-datacollection
+#PBS -l select=1:ncpus=16:ngpus=1:gpu_model=v100
+#PBS -l walltime=00:19:50
+#PBS -j oe
+module purge
+module load cuda-toolkit/8.0.44
+cd $PBS_O_WORKDIR
+./mmCUBLAS
